@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Calculadora Binária
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-col size="3">
+            <ion-label>Resultado  </ion-label>
+          </ion-col>
+          <ion-col size="3">
+            <ion-input [value]="result" disabled></ion-input>
+          </ion-col>
+          
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button fill="outline" color="danger" expand="block" (click)="clear()">Limpar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" >
+        <ion-button expand="block" (click)="addDigit(0)">0</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="block" color="success" (click)="addOperator('+')">+</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="block" (click)="addDigit(1)">1</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="block" (click)="calculate()" fill="outline">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+</ion-content>

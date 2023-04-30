@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Aluno
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img [src]="foto"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{nome}}</ion-card-title>
+      <p>Matrícula: {{matricula}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

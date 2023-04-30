@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Historico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let r of results">
+      <ion-label>{{ r.operation }} = {{ r.result }}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button color="success" expand="block" fill="outline" (click)="limparHistorico()">Limpar histórico</ion-button>
+</ion-content>
+
+
